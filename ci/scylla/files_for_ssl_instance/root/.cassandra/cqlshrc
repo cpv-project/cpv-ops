@@ -1,0 +1,8 @@
+[connection]
+hostname = localhost
+[authentication]
+username = cassandra
+password = cassandra
+[ssl]
+certfile = /etc/scylla/db.crt
+validate = false
