@@ -23,9 +23,9 @@ docker node ls
 ## Create directories
 
 ``` sh
-sudo mkdir /data
-sudo chown ubuntu:ubuntu /data
-mkdir /data/local
+sudo mkdir -p /var/home/data
+sudo chown ubuntu:ubuntu /var/home/data
+mkdir /var/home/data/local
 ```
 
 ## Clone repositories
@@ -33,7 +33,7 @@ mkdir /data/local
 ``` sh
 sudo apt-get install -y git
 ssh-keygen
-cd /data/local
+cd /var/home/data/local
 git clone ssh://git@github.com/cpv-project/cpv-cql-driver.git
 git clone ssh://git@github.com/cpv-project/cpv-framework.git
 git clone ssh://git@github.com/cpv-project/cpv-ops.git
