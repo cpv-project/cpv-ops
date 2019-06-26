@@ -11,11 +11,12 @@ RUN apt-get install -y ca-certificates
 RUN update-ca-certificates
 
 RUN apt-get install -y software-properties-common
-RUN add-apt-repository ppa:compiv/cpv-project
+RUN add-apt-repository -y ppa:compiv/cpv-project
+RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test
 RUN apt-get update
 RUN apt-get install -y \
 	git vim cppcheck gdb devscripts iproute2 \
-	seastar ninja-build cqldriver \
+	seastar ninja-build cqldriver g++-9 \
 	libgtest-dev libubsan1 libasan5 patchelf \
 	libhttp-parser-dev
 
