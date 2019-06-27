@@ -18,6 +18,8 @@ RUN apt-get install -y \
 	git vim cppcheck gdb devscripts iproute2 \
 	seastar ninja-build cqldriver g++-9 \
 	libgtest-dev libubsan1 libasan5 patchelf \
-	libhttp-parser-dev
+	libhttp-parser-dev \
+	build-essential libssl-dev binutils-dev
 
+WORKDIR /var/home/data/local
 CMD ["sh", "/start.sh"]
