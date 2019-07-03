@@ -51,3 +51,11 @@ git config --global gui.encoding utf-8
 ## Setup vim (optional)
 
 See: https://gist.github.com/303248153/950a8c986c8ba302701ae9fa34ab656a
+
+## Install perf (optional)
+
+``` sh
+sudo apt-get install -y linux-tools-common
+# run perf and it may ask you to install other package
+```
+
