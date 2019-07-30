@@ -48,6 +48,13 @@ git config --global gui.encoding utf-8
 # git config --global user.email EMAIL
 ```
 
+## Configure sysctl
+
+``` sh
+echo "net.core.somaxconn=65535" | sudo tee -a /etc/sysctl.conf
+cat /etc/sysctl.conf
+```
+
 ## Setup vim (optional)
 
 See: https://gist.github.com/303248153/950a8c986c8ba302701ae9fa34ab656a
