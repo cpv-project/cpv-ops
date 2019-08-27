@@ -13,6 +13,7 @@ docker run \
   --cap-add=SYS_ADMIN \
   --cap-add=SYSLOG \
   --security-opt label=disable \
+  --sysctl net.core.somaxconn=65535 \
   --restart always \
   -p 8000:8000 \
   -d \
