@@ -66,3 +66,17 @@ sudo apt-get install -y linux-tools-common
 # run perf and it may ask you to install other package
 ```
 
+## Generate gpg key for packing deb (optional)
+
+``` sh
+sudo su
+apt-get install rng-tools
+gpg --full-generate-key
+rngd -r /dev/urandom # in other shell
+cd ~/
+rm .gnupg/S.* # remove unix sockets
+chown -R ubuntu:ubuntu .gnupg
+mkdir -p /var/home/data/local/cpv-ops/local/docker/devenv/files/home/ubuntu/
+cp -r .gnupg /var/home/data/local/cpv-ops/local/docker/devenv/files/home/ubuntu/
+```
+
