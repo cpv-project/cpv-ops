@@ -75,8 +75,8 @@ gpg --full-generate-key
 rngd -r /dev/urandom # in other shell
 cd ~/
 rm .gnupg/S.* # remove unix sockets
-chown -R ubuntu:ubuntu .gnupg
 mkdir -p /var/home/data/local/cpv-ops/local/docker/devenv/files/home/ubuntu/
 cp -r .gnupg /var/home/data/local/cpv-ops/local/docker/devenv/files/home/ubuntu/
+chown -R ubuntu:ubuntu /var/home/data/local/cpv-ops/local/docker/devenv/files/home/ubuntu/.gnupg
 ```
 
